@@ -10,6 +10,18 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        tr:hover{
+            border: 2px solid rgb(23, 9, 226)
+        }
+
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-image: linear-gradient(to bottom, yellow, green);
+            border: 1px solid rgba(0, 0, 0, 0.459);
+        }
+
         table{
             width: 500px;
             border-collapse: collapse;
@@ -21,8 +33,12 @@
         }
 
         thead, tfoot{
-            background-color: rgba(128, 128, 128, 0.568);
+            background-color:rgb(0, 0, 250);
             color: white;
+        }
+
+        tbody tr:nth-child(2n){
+            background-color: rgba(173, 216, 230, 0.452);
         }
 
         td.numero{
@@ -35,6 +51,7 @@
     <!--
         Anatomia para Tabelas Grandes
         Table
+            CAPTION
             THEAD
                 tr, td, th
             TBODY
@@ -44,10 +61,11 @@
     -->
 
     <table>
+        <caption>População das Unidades Federativas do Brasil</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 80px">População</th>
             </tr>
         </thead>
         <tbody>
@@ -162,7 +180,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="numero"><strong>0000</strong></td>
             </tr>
         </tfoot>
