@@ -9,7 +9,20 @@
 <body>
     <h1>Exemplo de Formulário</h1>
     <form action="cadastro.js" method="get" autocomplete="">
-        
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="imasc" value="M" checked> 
+            <label for="imasc">Masculino</label> <br>
+            <input type="radio" name="sexo" id="ifem" value="F"> 
+            <label for="ifem">Feminino</label>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes Favoritos</legend>
+            <input type="checkbox" name="esfut" id="iesfut"> <label for="iesfut">Futebol</label> <br>
+            <input type="checkbox" name="esbas" id="iesbas"> <label for="iesbas">Basquete</label> <br>
+            <input type="checkbox" name="esnat" id="iesnat"> <label for="iesnat">Natação</label> <br>
+            <input type="checkbox" name="esvol" id="iesvol"> <label for="iesvol">Vôlei</label> <br>
+        </fieldset>
 
         <p>
             <input type="submit" value="Enviar">
