@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        label{
+            padding-right: 8px;
+        }
+
+        fieldset{
+            margin: 10px 10px 20px 10px;
+            border: 2px solid black;
+        }
+
+        legend{
+            color: rgba(8, 83, 246, 0.833);
+            font-weight: bold;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        select{
+            padding: 2px 10px 2px 10px;
+        }
+
+        .right{
+            padding-left: 40px;
+        }
+
+        #submit{
+            margin-left: 20px;
+        }
+
+        #reset{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crie sua Conta</h1>
+    <form action="cadastro.js" method="post" autocomplete="on">
+    <fieldset>
+        <legend>Dados Pessoais</legend>
+        <p>
+            <label for="inome">Nome: </label>
+            <input type="text" name="nome" id="inome" required>
+        </p>
+        <p>
+            <label for="irg">RG: </label>
+            <input type="text" name="rg" id="irg" required
+            placeholder="*apenas números*">
+        </p>
+        <p>
+            <label for="itel">Telefone: </label>
+            <input type="tel" name="tel" id="itel" required
+            pattern="^\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(DD)xxxxx-xxxx">
+        </p>
+        <p>
+            <label for="iemail">E-mail: </label>
+            <input type="email" name="email" id="iemail" required>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Endereço</legend>
+        <p>
+            <label for="icep">CEP: </label>
+            <input type="text" name="cep" id="icep"
+            placeholder="00000-000" required>
+        </p>
+        <p>
+            <label for="icity">Cidade: </label>
+            <input type="text" name="city" id="icity" required>
+            <label class="right" for="iuf">Estado: </label>
+            <select name="uf" id="iuf">
+                <option value="" selected>- -</option>
+                <option value="">AC</option>
+                <option value="">AL</option>
+                <option value="">AP</option>
+                <option value="">AM</option>
+                <option value="">BA</option>
+                <option value="">CE</option>
+                <option value="">DF</option>
+                <option value="">ES</option>
+                <option value="">GO</option>
+                <option value="">MA</option>
+                <option value="">MT</option>
+                <option value="">MS</option>
+                <option value="">MG</option>
+                <option value="">PA</option>
+                <option value="">PB</option>
+                <option value="">PR</option>
+                <option value="">PE</option>
+                <option value="">PI</option>
+                <option value="">RJ</option>
+                <option value="">RN</option>
+                <option value="">RS</option>
+                <option value="">RO</option>
+                <option value="">RR</option>
+                <option value="">SC</option>
+                <option value="">SP</option>
+                <option value="">SE</option>
+                <option value="">TO</option>
+            </select>
+        </p>
+        <p>
+            <label for="iadress">Endereço: </label>
+            <input type="text" name="adress" id="iadress">
+            <label class="right" for="inum">Número: </label>
+            <input type="text" name="num" id="inum" maxlength="5" required>
+        </p>
+    </fieldset>
+        <div id="submit">
+            <input type="submit" value="Enviar">
+            <input id="reset" type="reset" value="Reset">
+        </div>
+</form>
+</body>
+</html>
