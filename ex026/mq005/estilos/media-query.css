@@ -13,6 +13,7 @@
 
     menu li{
         display: inline-block;
+        margin-left: 5px;
     }
 
     main{
